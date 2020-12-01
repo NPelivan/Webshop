@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Livvic", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffce25;
+  height: 90px;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  margin-left: 1%;
+}
+
+span:first-child > a {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+span:last-child > a {
+  margin-left: 40%;
+  text-decoration: none;
+  color: black;
+}
+.logo > span {
+  display: block;
+}
+
+.cart {
+  position: relative;
+  left: 65%;
+  width: 100%;
+}
+
+.cart > span {
+  margin-left: 1%;
+}
+
+main {
+  display: flex;
+}
+
+aside {
+  padding-top: 6%;
+  padding-left: 3%;
+  width: 25%;
+}
+
+aside > h6 {
+  color: #7f7f7f;
+  margin-left: 14%;
+}
+
+.mobile-side-nav {
+  display: none;
+}
+
+aside > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 10%;
+}
+
+aside > ul > li {
+  margin-bottom: 5%;
+  font-size: 23px;
+}
+
+aside > ul > li > a {
+  text-decoration: none;
+  margin-left: 5%;
+  font-size: 23px;
+  color: #1d1d1b;
+}
+
+a:first-child {
+  margin-left: 14%;
+}
+
+aside > ul > li:nth-of-type(5) {
+  margin-left: 3%;
+}
+
+aside > ul > li:hover {
+  color: #0097cc;
+}
+aside > ul > li > a:hover {
+  color: #0097cc;
+  text-decoration: underline;
+}
+
+section > h2 {
+  font-size: 40px;
+  margin-top: 10%;
+}
+
+section > span:nth-of-type(1) {
+  color: #7f7f7f;
+}
+
+section > span:nth-of-type(2) {
+  color: #1d1d1b;
+  margin-left: 0.8%;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 500px auto 500px;
+  column-gap: 40px;
+  row-gap: 15px;
+}
+
+.card {
+  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f2f2f2;
+  border-radius: 6px;
+}
+
+.card > img {
+  border-radius: 6px 6px 0 0;
+}
+
+.card > span {
+  background-color: #1d1d1b;
+  color: white;
+  width: 10%;
+  text-align: center;
+  padding: 2%;
+  border-radius: 6px;
+  position: relative;
+  left: 85%;
+  bottom: 15px;
+  margin: 0;
+}
+
+.card-wrapper {
+  width: 75%;
+  margin: -5% auto;
+  margin-bottom: 10%;
+}
+
+.card-wrapper > span:nth-of-type(1) {
+  margin-right: 3%;
+}
+
+.card-wrapper > span:nth-of-type(3) {
+  font-size: 29px;
+  margin-right: 2%;
+}
+
+.card-wrapper > span:nth-of-type(4) {
+  font-size: 15px;
+}
+
+.card-wrapper > h4 {
+  font-size: 27px;
+  color: #0097cc;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+.card-wrapper > button {
+  display: block;
+  width: 100%;
+  padding: 5% 0 5% 0;
+  font-size: 18px;
+  margin-top: 5%;
+  background-color: #ffc80c;
+  border-radius: 6px;
+  border: 0;
+  box-shadow: 1px 2px 8px rgba(127, 127, 127, 0.25);
+}
+
+.card-wrapper > .mobile-btn {
+  display: none;
+}
+
+.load-btn > button {
+  position: relative;
+  left: 50%;
+  margin-top: 5%;
+  border: 0;
+  background-color: white;
+  text-decoration: underline #0097cc 3px;
+}
+
+footer {
+  background: rgba(127, 127, 127, 0.1);
+  margin-top: 4%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  color: rgba(127, 127, 127, 0.9);
+  font-weight: 600;
+}
+
+/* Laptop  1024px */
+
+@media (max-width: 1025px) {
+  article {
+    display: grid;
+    grid-template-columns: 220px 220px 220px;
+    grid-template-rows: 500px auto 500px;
+    column-gap: 30px;
+    row-gap: 15px;
+  }
+}
+
+/* Mobile 425px */
+@media (max-width: 426px) {
+  main {
+    display: block;
+  }
+  .cart {
+    font-size: 25px;
+  }
+  .cart > span {
+    display: none;
+  }
+
+  aside > h6 {
+    display: none;
+  }
+
+  aside > ul {
+    display: none;
+  }
+
+  .mobile-side-nav {
+    display: inline;
+    border: 0;
+    color: #0097cc;
+    font-size: 23px;
+  }
+
+  section {
+    width: 90%;
+    margin: auto;
+  }
+
+  section > h2,
+  span {
+    margin-left: 10%;
+  }
+
+  article {
+    display: block;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card > img {
+    width: 30%;
+  }
+
+  .card > span {
+    position: relative;
+    left: -5%;
+    top: 25px;
+    height: 100%;
+  }
+
+  .card-wrapper {
+    margin: 0;
+    width: 100%;
+    padding: 8% 8% 8% 0;
+  }
+
+  .card-wrapper > span {
+    width: 100%;
+    display: inline;
+    margin: 0;
+  }
+
+  .card-wrapper > button {
+    display: none;
+  }
+
+  .card-wrapper > .mobile-btn {
+    display: inline;
+    width: 20%;
+    margin-left: 12%;
+  }
+}
