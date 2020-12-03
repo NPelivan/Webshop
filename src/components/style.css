@@ -53,6 +53,18 @@ span:last-child > a {
   margin-left: 1%;
 }
 
+.opened-cart {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  bottom: 100px;
+  left: 0;
+  background-color: blue;
+  width: 100%;
+  z-index: 100;
+  display: block;
+}
+
 main {
   display: flex;
 }
@@ -89,10 +101,6 @@ aside > ul > li > a {
   margin-left: 5%;
   font-size: 23px;
   color: #1d1d1b;
-}
-
-a:first-child {
-  margin-left: 14%;
 }
 
 aside > ul > li:nth-of-type(5) {
@@ -137,8 +145,13 @@ article {
   border-radius: 6px;
 }
 
-.card > img {
+.card:hover {
+  box-shadow: 1px 2px 16px rgba(127, 127, 127, 0.35);
+}
+
+.card > a > img {
   border-radius: 6px 6px 0 0;
+  width: 100%;
 }
 
 .card > span {
@@ -173,11 +186,15 @@ article {
   font-size: 15px;
 }
 
-.card-wrapper > h4 {
+.card-wrapper > a > h4 {
   font-size: 27px;
   color: #0097cc;
   margin-top: 4%;
   margin-bottom: 4%;
+}
+
+.card-wrapper > a {
+  text-decoration: none;
 }
 
 .card-wrapper > button {

@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Link,
+  Switch,
+  Router,
+  Redirect,
+} from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPaintBrush,
@@ -12,6 +19,8 @@ import {
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 import image from "./images/320x180.jpg";
+import "./style.css";
+import Product from "./product";
 
 export default class Main extends Component {
   state = {
@@ -35,6 +44,14 @@ export default class Main extends Component {
   addtobasket = () => {
     const oldValue = this.state.count;
     this.setState({ count: oldValue + 1 });
+  };
+
+  product = () => {
+    return (
+      <div>
+        <Product />
+      </div>
+    );
   };
 
   render() {
@@ -87,7 +104,9 @@ export default class Main extends Component {
 
             <article>
               <div className="card">
-                <img src={image} alt="Product" />
+                <Link to="/product">
+                  <img src={image} alt="Product" />
+                </Link>
 
                 <span>
                   <FontAwesomeIcon icon={faPaintBrush} />
@@ -100,7 +119,9 @@ export default class Main extends Component {
                     <FontAwesomeIcon icon={faClock} /> 09:00h
                   </span>
 
-                  <h4>Interaction Design Workshop</h4>
+                  <Link to="/product">
+                    <h4>Interaction Design Workshop</h4>
+                  </Link>
                   <span>495,00</span>
                   <span>EUR</span>
 
@@ -112,7 +133,9 @@ export default class Main extends Component {
               </div>
 
               <div className="card">
-                <img src={image} alt="Product" />
+                <Link to="/product">
+                  <img src={image} alt="Product" />
+                </Link>
                 <span>
                   <FontAwesomeIcon icon={faPaintBrush} />
                 </span>
@@ -124,7 +147,9 @@ export default class Main extends Component {
                     <FontAwesomeIcon icon={faClock} /> 09:00h
                   </span>
 
-                  <h4>Interaction Design Workshop</h4>
+                  <Link to="/product">
+                    <h4>Interaction Design Workshop</h4>
+                  </Link>
                   <span>495,00</span>
                   <span>EUR</span>
 
@@ -136,7 +161,9 @@ export default class Main extends Component {
               </div>
 
               <div className="card">
-                <img src={image} alt="Product" />
+                <Link to="/product">
+                  <img src={image} alt="Product" />
+                </Link>
                 <span>
                   <FontAwesomeIcon icon={faPaintBrush} />
                 </span>
@@ -148,7 +175,9 @@ export default class Main extends Component {
                     <FontAwesomeIcon icon={faClock} /> 09:00h
                   </span>
 
-                  <h4>Interaction Design Workshop</h4>
+                  <Link to="/product">
+                    <h4>Interaction Design Workshop</h4>
+                  </Link>
                   <span>495,00</span>
                   <span>EUR</span>
 
@@ -160,7 +189,9 @@ export default class Main extends Component {
               </div>
 
               <div className="card">
-                <img src={image} alt="Product" />
+                <Link to="/product">
+                  <img src={image} alt="Product" />
+                </Link>
                 <span>
                   <FontAwesomeIcon icon={faPaintBrush} />
                 </span>
@@ -171,8 +202,9 @@ export default class Main extends Component {
                   <span>
                     <FontAwesomeIcon icon={faClock} /> 09:00h
                   </span>
-
-                  <h4>Interaction Design Workshop</h4>
+                  <Link to="/product">
+                    <h4>Interaction Design Workshop</h4>
+                  </Link>
                   <span>495,00</span>
                   <span>EUR</span>
 
@@ -184,7 +216,9 @@ export default class Main extends Component {
               </div>
 
               <div className="card">
-                <img src={image} alt="Product" />
+                <Link to="product">
+                  <img src={image} alt="Product" />
+                </Link>
                 <span>
                   <FontAwesomeIcon icon={faPaintBrush} />
                 </span>
@@ -195,8 +229,9 @@ export default class Main extends Component {
                   <span>
                     <FontAwesomeIcon icon={faClock} /> 09:00h
                   </span>
-
-                  <h4>Interaction Design Workshop</h4>
+                  <Link to="/product">
+                    <h4>Interaction Design Workshop</h4>
+                  </Link>
                   <span>495,00</span>
                   <span>EUR</span>
 
@@ -208,7 +243,9 @@ export default class Main extends Component {
               </div>
 
               <div className="card">
-                <img src={image} alt="Product" />
+                <Link to="/product">
+                  <img src={image} alt="Product" />
+                </Link>
                 <span>
                   <FontAwesomeIcon icon={faPaintBrush} />
                 </span>
@@ -219,8 +256,9 @@ export default class Main extends Component {
                   <span>
                     <FontAwesomeIcon icon={faClock} /> 09:00h
                   </span>
-
-                  <h4>Interaction Design Workshop</h4>
+                  <Link to="product">
+                    <h4>Interaction Design Workshop</h4>
+                  </Link>
                   <span>495,00</span>
                   <span>EUR</span>
 
@@ -232,7 +270,9 @@ export default class Main extends Component {
               </div>
 
               <div className="card">
-                <img src={image} alt="Product" />
+                <Link to="/product">
+                  <img src={image} alt="Product" />
+                </Link>
                 <span>
                   <FontAwesomeIcon icon={faPaintBrush} />
                 </span>
@@ -243,8 +283,9 @@ export default class Main extends Component {
                   <span>
                     <FontAwesomeIcon icon={faClock} /> 09:00h
                   </span>
-
-                  <h4>Interaction Design Workshop</h4>
+                  <Link to="/product">
+                    <h4>Interaction Design Workshop</h4>
+                  </Link>
                   <span>495,00</span>
                   <span>EUR</span>
 
@@ -256,7 +297,9 @@ export default class Main extends Component {
               </div>
 
               <div className="card">
-                <img src={image} alt="Product" />
+                <Link to="/product">
+                  <img src={image} alt="Product" />
+                </Link>
                 <span>
                   <FontAwesomeIcon icon={faPaintBrush} />
                 </span>
@@ -267,8 +310,9 @@ export default class Main extends Component {
                   <span>
                     <FontAwesomeIcon icon={faClock} /> 09:00h
                   </span>
-
-                  <h4>Interaction Design Workshop</h4>
+                  <Link to="/product">
+                    <h4>Interaction Design Workshop</h4>
+                  </Link>
                   <span>495,00</span>
                   <span>EUR</span>
 
@@ -280,7 +324,9 @@ export default class Main extends Component {
               </div>
 
               <div className="card">
-                <img src={image} alt="Product" />
+                <Link to="/product">
+                  <img src={image} alt="Product" />
+                </Link>
                 <span>
                   <FontAwesomeIcon icon={faPaintBrush} />
                 </span>
@@ -291,8 +337,9 @@ export default class Main extends Component {
                   <span>
                     <FontAwesomeIcon icon={faClock} /> 09:00h
                   </span>
-
-                  <h4>Interaction Design Workshop</h4>
+                  <Link to="/product">
+                    <h4>Interaction Design Workshop</h4>
+                  </Link>
                   <span>495,00</span>
                   <span>EUR</span>
 
@@ -316,7 +363,9 @@ export default class Main extends Component {
               {this.state.on && (
                 <article>
                   <div className="card">
-                    <img src={image} alt="Product" />
+                    <Link to="/product">
+                      <img src={image} alt="Product" />
+                    </Link>
                     <span>
                       <FontAwesomeIcon icon={faPaintBrush} />
                     </span>
@@ -327,8 +376,9 @@ export default class Main extends Component {
                       <span>
                         <FontAwesomeIcon icon={faClock} /> 09:00h
                       </span>
-
-                      <h4>Interaction Design Workshop</h4>
+                      <Link to="/product">
+                        <h4>Interaction Design Workshop</h4>
+                      </Link>
                       <span>495,00</span>
                       <span>EUR</span>
 
@@ -340,7 +390,9 @@ export default class Main extends Component {
                   </div>
 
                   <div className="card">
-                    <img src={image} alt="Product" />
+                    <Link to="/product">
+                      <img src={image} alt="Product" />
+                    </Link>
                     <span>
                       <FontAwesomeIcon icon={faPaintBrush} />
                     </span>
@@ -351,8 +403,9 @@ export default class Main extends Component {
                       <span>
                         <FontAwesomeIcon icon={faClock} /> 09:00h
                       </span>
-
-                      <h4>Interaction Design Workshop</h4>
+                      <Link to="/product">
+                        <h4>Interaction Design Workshop</h4>
+                      </Link>
                       <span>495,00</span>
                       <span>EUR</span>
 
@@ -364,7 +417,9 @@ export default class Main extends Component {
                   </div>
 
                   <div className="card">
-                    <img src={image} alt="Product" />
+                    <Link to="/product">
+                      <img src={image} alt="Product" />
+                    </Link>
                     <span>
                       <FontAwesomeIcon icon={faPaintBrush} />
                     </span>
@@ -375,8 +430,9 @@ export default class Main extends Component {
                       <span>
                         <FontAwesomeIcon icon={faClock} /> 09:00h
                       </span>
-
-                      <h4>Interaction Design Workshop</h4>
+                      <Link to="/product">
+                        <h4>Interaction Design Workshop</h4>
+                      </Link>
                       <span>495,00</span>
                       <span>EUR</span>
 
@@ -388,7 +444,9 @@ export default class Main extends Component {
                   </div>
 
                   <div className="card">
-                    <img src={image} alt="Product" />
+                    <Link to="/product">
+                      <img src={image} alt="Product" />
+                    </Link>
                     <span>
                       <FontAwesomeIcon icon={faPaintBrush} />
                     </span>
@@ -399,8 +457,9 @@ export default class Main extends Component {
                       <span>
                         <FontAwesomeIcon icon={faClock} /> 09:00h
                       </span>
-
-                      <h4>Interaction Design Workshop</h4>
+                      <Link to="/product">
+                        <h4>Interaction Design Workshop</h4>
+                      </Link>
                       <span>495,00</span>
                       <span>EUR</span>
 
@@ -412,7 +471,9 @@ export default class Main extends Component {
                   </div>
 
                   <div className="card">
-                    <img src={image} alt="Product" />
+                    <Link to="/product">
+                      <img src={image} alt="Product" />
+                    </Link>
                     <span>
                       <FontAwesomeIcon icon={faPaintBrush} />
                     </span>
@@ -423,8 +484,9 @@ export default class Main extends Component {
                       <span>
                         <FontAwesomeIcon icon={faClock} /> 09:00h
                       </span>
-
-                      <h4>Interaction Design Workshop</h4>
+                      <Link to="/product">
+                        <h4>Interaction Design Workshop</h4>
+                      </Link>
                       <span>495,00</span>
                       <span>EUR</span>
 
@@ -436,7 +498,9 @@ export default class Main extends Component {
                   </div>
 
                   <div className="card">
-                    <img src={image} alt="Product" />
+                    <Link to="/product">
+                      <img src={image} alt="Product" />
+                    </Link>
                     <span>
                       <FontAwesomeIcon icon={faPaintBrush} />
                     </span>
@@ -447,8 +511,9 @@ export default class Main extends Component {
                       <span>
                         <FontAwesomeIcon icon={faClock} /> 09:00h
                       </span>
-
-                      <h4>Interaction Design Workshop</h4>
+                      <Link to="/product">
+                        <h4>Interaction Design Workshop</h4>
+                      </Link>
                       <span>495,00</span>
                       <span>EUR</span>
 
@@ -460,7 +525,9 @@ export default class Main extends Component {
                   </div>
 
                   <div className="card">
-                    <img src={image} alt="Product" />
+                    <Link to="/product">
+                      <img src={image} alt="Product" />
+                    </Link>
                     <span>
                       <FontAwesomeIcon icon={faPaintBrush} />
                     </span>
@@ -471,8 +538,9 @@ export default class Main extends Component {
                       <span>
                         <FontAwesomeIcon icon={faClock} /> 09:00h
                       </span>
-
-                      <h4>Interaction Design Workshop</h4>
+                      <Link to="/product">
+                        <h4>Interaction Design Workshop</h4>
+                      </Link>
                       <span>495,00</span>
                       <span>EUR</span>
 
@@ -484,7 +552,9 @@ export default class Main extends Component {
                   </div>
 
                   <div className="card">
-                    <img src={image} alt="Product" />
+                    <Link to="/product">
+                      <img src={image} alt="Product" />
+                    </Link>
                     <span>
                       <FontAwesomeIcon icon={faPaintBrush} />
                     </span>
@@ -495,8 +565,9 @@ export default class Main extends Component {
                       <span>
                         <FontAwesomeIcon icon={faClock} /> 09:00h
                       </span>
-
-                      <h4>Interaction Design Workshop</h4>
+                      <Link to="/product">
+                        <h4>Interaction Design Workshop</h4>
+                      </Link>
                       <span>495,00</span>
                       <span>EUR</span>
 
@@ -508,7 +579,9 @@ export default class Main extends Component {
                   </div>
 
                   <div className="card">
-                    <img src={image} alt="Product" />
+                    <Link to="/product">
+                      <img src={image} alt="Product" />
+                    </Link>
                     <span>
                       <FontAwesomeIcon icon={faPaintBrush} />
                     </span>
@@ -519,8 +592,9 @@ export default class Main extends Component {
                       <span>
                         <FontAwesomeIcon icon={faClock} /> 09:00h
                       </span>
-
-                      <h4>Interaction Design Workshop</h4>
+                      <Link to="/product">
+                        <h4>Interaction Design Workshop</h4>
+                      </Link>
                       <span>495,00</span>
                       <span>EUR</span>
 
@@ -537,6 +611,10 @@ export default class Main extends Component {
         </main>
 
         <footer>© TINEL Meetup 2020.</footer>
+
+        <Switch>
+          <Route exact path="/product" component={this.product} />
+        </Switch>
       </>
     );
   }
