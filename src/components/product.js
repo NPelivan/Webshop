@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Navbar from "./navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
@@ -10,71 +9,82 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import image from "./images/320x180.jpg";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import "./style.css";
 
 export default class Product extends Component {
   render() {
     return (
       <>
         <main>
-          <aside>
+          <aside className="link-back">
             <FontAwesomeIcon icon={faArrowLeft} />
-            <Link to="/home">Natrag</Link>
+            <Link to="/workshops">Natrag</Link>
           </aside>
 
-          <section>
+          <section className="product-wrapper">
             <img src={image} alt="Product" />
 
-            <FontAwesomeIcon icon={faPaintBrush} />
-            <span>
-              <FontAwesomeIcon icon={faCalendarAlt} />
-              27.6.2020.
-            </span>
+            <div className="product-icons">
+              <span>
+                <FontAwesomeIcon icon={faPaintBrush} />
+              </span>
+              <span>
+                <FontAwesomeIcon icon={faCalendarAlt} />
+                Sub 27.6.2020.
+              </span>
 
-            <span>
-              <FontAwesomeIcon icon={faClock} /> 09:00 h
-            </span>
+              <span>
+                <FontAwesomeIcon icon={faClock} /> 09:00 h
+              </span>
+            </div>
 
-            <h1>Ineraction Design Workshop</h1>
+            <div className="description-wrapper">
+              <div className="flex-item">
+                <h1>Ineraction Design Workshop</h1>
 
-            <b>with</b>
+                <div className="user">
+                  <b>WITH</b>
+                  <h4>Marko Maljković</h4>
+                </div>
 
-            <h4>Marko Maljković</h4>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </p>
+                <p>
+                  It has survived not only five centuries, but also the leap
+                  into electronic typesetting, remaining essentially unchanged.
+                  It was popularised in the 1960s with the release of Letraset
+                  sheets containing Lorem Ipsum passages, and more recently with
+                  desktop publishing software like Aldus PageMaker including
+                  versions of Lorem Ipsum.
+                </p>
+              </div>
 
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-            <p>
-              It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
+              <div className="flex-item-sec">
+                <h5>Buy Your Ticket</h5>
+                <span>495,00</span>
+                <span>EUR</span>
 
-            <div>
-              <h5>Buy Your Ticket</h5>
-              <span>495,00</span>
-              <span>EUR</span>
+                <select>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
 
-              <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-              </select>
-
-              <button>Add to Cart</button>
-              <small>Subtotal: 4.950,00 HRK</small>
+                <button>Add to Cart</button>
+                <small>Subtotal: 4.950,00 HRK</small>
+              </div>
             </div>
           </section>
         </main>

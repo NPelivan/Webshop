@@ -63,28 +63,28 @@ export default class Main extends Component {
             <BrowserRouter>
               <ul>
                 <li>
-                  <Link to="/">All</Link>
+                  <Link to="/categories">All</Link>
                 </li>
 
                 <li>
                   <FontAwesomeIcon icon={faPaintBrush} />{" "}
-                  <Link to="/">Design</Link>
+                  <Link to="/categories">Design</Link>
                 </li>
 
                 <li>
                   <FontAwesomeIcon icon={faColumns} />{" "}
-                  <Link to="/">Frontend</Link>
+                  <Link to="/categories">Frontend</Link>
                 </li>
 
                 <li>
                   <FontAwesomeIcon icon={faChevronLeft} />
                   <FontAwesomeIcon icon={faChevronRight} />
-                  <Link to="/">Backend</Link>
+                  <Link to="/categories">Backend</Link>
                 </li>
 
                 <li>
                   <FontAwesomeIcon icon={faBolt} />{" "}
-                  <Link to="/">Marketing</Link>
+                  <Link to="/categories">Marketing</Link>
                 </li>
               </ul>
 
@@ -216,7 +216,7 @@ export default class Main extends Component {
               </div>
 
               <div className="card">
-                <Link to="product">
+                <Link to="/product">
                   <img src={image} alt="Product" />
                 </Link>
                 <span>
@@ -256,7 +256,7 @@ export default class Main extends Component {
                   <span>
                     <FontAwesomeIcon icon={faClock} /> 09:00h
                   </span>
-                  <Link to="product">
+                  <Link to="/product">
                     <h4>Interaction Design Workshop</h4>
                   </Link>
                   <span>495,00</span>

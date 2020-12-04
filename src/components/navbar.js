@@ -20,17 +20,16 @@ export default class Navbar extends Component {
       <>
         <header>
           <nav>
-            <BrowserRouter>
-              <div className="logo">
-                <span>
-                  <Link to="/">Tinel</Link>
-                </span>
+            <div className="logo">
+              <span>
+                <Link to="/workshops">Tinel</Link>
+              </span>
 
-                <span>
-                  <Link to="/">Workshop</Link>
-                </span>
-              </div>
-            </BrowserRouter>
+              <span>
+                <Link to="/workshops">Workshop</Link>
+              </span>
+            </div>
+
             <div className="cart" onClick={this.cartWrapper}>
               <FontAwesomeIcon icon={faShoppingCart} />
               <span>Cart is empty</span>

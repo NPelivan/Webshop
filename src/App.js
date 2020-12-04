@@ -13,14 +13,6 @@ const main = () => {
   );
 };
 
-const product = () => {
-  return (
-    <div>
-      <Product />
-    </div>
-  );
-};
-
 class App extends React.Component {
   render() {
     return (
@@ -29,7 +21,7 @@ class App extends React.Component {
           <Navbar />
 
           <Switch>
-            <Route path="/home" component={main} />
+            <Route path="/workshops" component={main} />
             <Route path="/product" exact>
               <Product />
             </Route>
