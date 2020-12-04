@@ -68,28 +68,29 @@ export default class Product extends Component {
                 <h5>Buy Your Ticket</h5>
                 <span>495,00</span>
                 <span>EUR</span>
+                <div className="add-to-cart">
+                  <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                  </select>
 
-                <select>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
-                  <option>10</option>
-                </select>
-
-                <button>Add to Cart</button>
+                  <button>Add to Cart</button>
+                </div>
                 <small>Subtotal: 4.950,00 HRK</small>
               </div>
             </div>
           </section>
         </main>
 
-        <section>
+        <section className="similar">
           <h2>Similar Workshops</h2>
 
           <article>
@@ -180,6 +181,8 @@ export default class Product extends Component {
             </div>
           </article>
         </section>
+
+        <footer>© TINEL Meetup 2020.</footer>
       </>
     );
   }

@@ -409,3 +409,85 @@ footer {
 .flex-item-sec {
   width: 30%;
 }
+
+.flex-item > p {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 5%;
+  width: 75%;
+}
+
+.flex-item > p:nth-of-type(2) {
+  margin-top: 2%;
+}
+
+.flex-item-sec {
+  box-shadow: 1px 2px 16px rgba(127, 127, 127, 0.25);
+  border-radius: 8px;
+  padding: 5%;
+  height: 60%;
+}
+.flex-item-sec > h5 {
+  font-size: 23px;
+  margin-bottom: 5%;
+}
+
+.flex-item-sec > span:nth-of-type(1) {
+  font-size: 40px;
+}
+
+.flex-item-sec > span:nth-of-type(2) {
+  font-size: 23px;
+  margin-left: 3%;
+}
+
+.add-to-cart {
+  display: flex;
+  margin-bottom: 5%;
+}
+
+.add-to-cart > select {
+  border: 1px solid #0097cc;
+  padding: 4%;
+  font-size: 23px;
+  border-radius: 8px;
+}
+
+.add-to-cart > button {
+  background: #ffc80c;
+  border-radius: 8px;
+  padding: 6% 11% 6% 11%;
+  margin-left: 3%;
+  font-size: 18px;
+}
+
+.add-to-cart > select,
+button {
+  margin-top: 8%;
+}
+
+.flex-item-sec > small {
+  font-size: 15px;
+  color: #7f7f7f;
+  position: relative;
+  right: 0;
+  left: 29%;
+}
+
+.similar {
+  width: 100%;
+  margin: auto;
+  background-color: #f2f2f2;
+  padding-top: 0.1%;
+}
+
+.similar > h2 {
+  width: 60%;
+  margin: 8% auto 1%;
+}
+
+.similar > article {
+  width: 60%;
+  margin: auto;
+  height: 650px;
+}
