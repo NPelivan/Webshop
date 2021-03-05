@@ -18,7 +18,7 @@ export default class Product extends Component {
         <main>
           <aside className="link-back">
             <FontAwesomeIcon icon={faArrowLeft} />
-            <Link to="/workshops">Natrag</Link>
+            <Link to="/">Natrag</Link>
           </aside>
 
           <section className="product-wrapper">

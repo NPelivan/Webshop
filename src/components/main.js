@@ -25,25 +25,12 @@ import Product from "./product";
 export default class Main extends Component {
   state = {
     on: false,
-    off: true,
-    count: 0,
   };
 
   showMore = () => {
     this.setState({
       on: !this.state.on,
     });
-  };
-
-  hideBtn = () => {
-    this.setState({
-      off: !this.state.off,
-    });
-  };
-
-  addtobasket = () => {
-    const oldValue = this.state.count;
-    this.setState({ count: oldValue + 1 });
   };
 
   product = () => {
@@ -125,7 +112,7 @@ export default class Main extends Component {
                   <span>495,00</span>
                   <span>EUR</span>
 
-                  <button onClick={this.addtobasket}>Add to Cart</button>
+                  <button>Add to Cart</button>
                   <button className="mobile-btn">
                     <FontAwesomeIcon icon={faShoppingCart} />
                   </button>
@@ -352,13 +339,9 @@ export default class Main extends Component {
             </article>
 
             <div className="show-more">
-              {this.state.off && (
-                <div className="load-btn">
-                  <button onClick={(this.hideBtn, this.showMore)}>
-                    Load more
-                  </button>
-                </div>
-              )}
+              <div className="load-btn">
+                <button onClick={this.showMore}>Load more</button>
+              </div>
 
               {this.state.on && (
                 <article>

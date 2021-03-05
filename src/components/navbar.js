@@ -22,11 +22,11 @@ export default class Navbar extends Component {
           <nav>
             <div className="logo">
               <span>
-                <Link to="/workshops">Tinel</Link>
+                <Link to="/">Tinel</Link>
               </span>
 
               <span>
-                <Link to="/workshops">Workshop</Link>
+                <Link to="/">Workshop</Link>
               </span>
             </div>
 
